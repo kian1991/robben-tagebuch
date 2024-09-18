@@ -1,0 +1,11 @@
+services:
+  robbenDb:
+    image: postgres:16.4-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - 5444:5432
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
